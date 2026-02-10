@@ -8,6 +8,13 @@ app.use(cors());
 
 const EMAIL= "nishant0753.be23@chitkara.edu.in";
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "BFHL API is running",
+    health: "/health",
+    endpoint: "/bfhl"
+  });
+});
 
 app.get("/health"  , (req, res) => {
     res.status(200).json({
